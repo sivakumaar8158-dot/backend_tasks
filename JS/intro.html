@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Basics Demo</title>
+</head>
+<body>
+  <h2>Open Console in your browser to See Output</h2>
+
+  <script>
+    // console.clear();
+    console.log("=== VARIABLES ===");
+
+    var a = 10;
+    let b = 20;
+    const c = 30;
+
+    console.log(a, b, c);
+
+    // Hoisting
+    console.log("\n=== HOISTING ===");
+    console.log(x);  
+    var x = 5;
+
+    // Scope
+    console.log("SCOPE");
+    if (true) {
+      var v = "var scope";
+      let l = "let scope";
+      const k = "const scope";
+    }
+    console.log(v);
+
+    // Primitive Data Types
+    console.log("\n=== PRIMITIVE DATA TYPES ===");
+    let num = 100;               
+    let str = "Hello";           
+    let bool = true;             
+    let und;                     
+    let n = null;                
+    let sym = Symbol("id");      
+ 
+
+    console.log(typeof num, typeof str, typeof bool, typeof und, typeof n, typeof sym);
+
+    // Operators
+    console.log("OPERATORS");
+
+    console.log("Arithmetic:", 5 + 3, 5 - 3, 5 * 3, 5 / 3, 5 % 3);
+    console.log("Assignment:", a += 5);
+    console.log("Comparison:", 5 == "5", 5 === "5", 5 != 4);
+    console.log("Logical:", true && false, true || false, !true);
+
+    // Truthy & Falsy
+    console.log("TRUTHY & FALSY");
+
+    let values = [0, 1, "hi", "hello", null, undefined, NaN, [], {}, "0"];
+
+    values.forEach(val => {
+      if (val) {
+        console.log(val, "=> Truthy");
+      } else {
+        console.log(val, "=> Falsy");
+      }
+    });
+  </script>
+</body>
+</html>
