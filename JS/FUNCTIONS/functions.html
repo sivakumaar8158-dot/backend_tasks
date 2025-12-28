@@ -1,0 +1,162 @@
+<script>
+
+    function add1(a,b){
+      return a+b;
+    }
+    console.log(add1(2,3));
+
+    const add2 = function(a,b){
+        return a+b
+
+    }
+    console.log(add2(5,8));
+
+    const add3 = (a,b)=>{
+        return a+b
+
+    }
+    console.log(add3(4,5));
+    
+    const greet1 = (name)=>{
+     return "Hello, " + name; 
+    }
+    console.log(greet1("siva"));
+
+    const greet2 = (name)=>"Hello,"+name;
+    console.log(greet2("sivakumar"));
+
+    const greet3 = name => "Hello,"+name;
+    console.log(greet3("sk"));
+
+    function calculateBill(amount,taxpercentage){
+        return amount + (amount*taxpercentage/100)
+    }
+    console.log(calculateBill(500,18));
+    
+    const calculateBill1 = (amount,taxpercentage)=>{
+        return amount + (amount*taxpercentage/100)
+    }
+    console.log(calculateBill1(1000,18));
+    
+    const square = n =>n*n
+    console.log(square(5));
+
+    function sumAll (...numbers){
+      return  numbers.reduce((sum,num)=>sum+num,0)
+    }
+      console.log(sumAll(1,2,3,4));
+        
+     const sumAll1 = (...numbers)=>{
+        return numbers.reduce((sum,num)=>sum+num ,0)
+
+     } 
+     console.log(sumAll1(2,3,6,7,9,1));
+     
+
+     const marks = [98, 45, 67, 30, 88, 76];
+    function getPassedMarks(){
+        return marks.filter(mark=> mark>=50)
+    }
+    console.log(getPassedMarks());
+
+    const marks1 = [98, 45, 56, 30, 88, 76];
+    const getpassedmarks = ()=>{
+        return marks1.filter(mark => mark>=60)
+    }
+    console.log(getpassedmarks());
+
+    function formatName(firstName, lastName) {
+    return firstName.toUpperCase() + " " + lastName.toUpperCase();
+}
+    console.log(formatName("sivakumar","siva"));
+    
+
+    const formatName1 = function(firstName, lastName){
+     return firstName.toUpperCase() + " " + lastName.toUpperCase(); 
+    }
+    console.log(formatName1("siva","sivakumar"));
+
+    console.log(add(2, 3));
+
+
+function add(a, b) {
+  return a + b;
+}
+
+
+
+    const greet = (greeting)=>(name)=>`${greeting},${name}`
+    console.log(greet("Hello")("world"));
+
+    function getCharFrequency(str){
+        const frequency = {}
+
+        for (let i=0;i<str.length;i++){
+            const char = str[i]
+          
+            
+            if (frequency[char]){
+            frequency[char]++
+        }else{
+            frequency[char] = 1;
+        }
+        }
+        return frequency;
+        
+    }
+    console.log(getCharFrequency("chocolate"));
+    console.log(getCharFrequency("malayalam"));
+
+    const people = [
+  { name: "siva", age: 21 },
+  { name: "sandhiya", age: 20 },
+  { name: "abdul", age: 20 },
+  { name: "raghu", age: 20 },
+];
+
+function groupByAge(people) {
+  const result = {};
+
+  for (let i = 0; i < people.length; i++) {
+    const age = people[i].age;
+    const name = people[i].name;
+
+    if (!result[age]) {
+      result[age] = [];
+    }
+
+    result[age].push(name);
+  }
+
+  return result;
+}
+console.log(groupByAge(people));
+
+function factorial(n) {
+  if (n < 0) return null;
+
+  let fact = 1;
+  for (let i = 1; i <= n; i++) {
+    fact *= i;
+  }
+
+  return fact;
+}
+console.log(factorial(5));
+
+function reverseString(str) {
+  let reversed = "";
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+
+  return reversed;
+}
+console.log(reverseString("Sivakumar"));
+
+
+    
+    
+    
+</script>
