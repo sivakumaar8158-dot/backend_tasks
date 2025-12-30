@@ -1,0 +1,94 @@
+<script>
+
+// Task:1
+
+function doTask(callback) {
+  callback();
+  console.log("Task Completed");
+}
+
+doTask(() => {
+  console.log("Callback executed");
+});
+
+
+// Task:2
+
+function checkAge(age, callback) {
+  callback(age);
+}
+
+checkAge(20, (age) => {
+  if (age >= 18) {
+    console.log("Eligible");
+  } else {
+    console.log("Not Eligible");
+  }
+});
+
+
+// Task:3
+
+function apiCall(successCallback) {
+  console.log("API Calling...");
+  successCallback();
+}
+
+apiCall(() => {
+  console.log("API Success");
+  console.log("Final Message Shown");
+});
+
+
+// Task:4
+
+// let arr = [10, 20];
+// arr.push(30, 40, 50);
+// arr.shift();
+
+// console.log(arr);
+
+
+// Task:5
+
+// let arr = [1, 2, 3, 4];
+// arr.pop();
+// arr.push(100);
+
+// console.log(arr);
+
+// Task:6
+
+let arr = [1, 2, 3, 4, 5, 6];
+arr.splice(2, 2); // removes 3 & 4
+
+console.log(arr);
+
+
+// Task:7
+
+let nums = [1, 2, 3, 4, 5, 6];
+
+let evenNums = nums.filter(n => n % 2 === 0);
+console.log(evenNums);
+
+
+// Task:8
+
+let prices = [100, 200, 300];
+
+let gstPrices = prices.map(p => p + p * 0.18);
+console.log(gstPrices);
+
+
+// Task:9
+
+// let prices = [100, 200, 300];
+
+// let gstPrices = prices.map(p => p + p * 0.18);
+// console.log(gstPrices);
+
+
+
+
+</script>
