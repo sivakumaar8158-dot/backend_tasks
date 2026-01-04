@@ -1,0 +1,212 @@
+
+<script>
+    let name = "sivakumar";
+    let age = 21;
+
+const nameAge = () => {
+  console.log(`${name}, ${age}`);
+};
+
+nameAge();
+
+if(true){
+    let a = 10;
+    console.log(a);
+    
+}
+
+// const b = 5
+// b = 9
+// console.log(b);
+// in const value cannot be reassigned
+
+// for (var i = 1; i <= 3; i++) {
+//     setTimeout(() => {
+//         console.log(i);
+//     }, 1000);
+// }
+
+// when we use var in for with log it shows 1,2,3 but in asynchronous process like settimeout
+// for (let i = 1; i <= 3; i++) {
+//     setTimeout(() => {
+//         console.log(i);
+//     }, 1000);
+// }
+
+function add (c,d){
+    console.log(c+d);
+    
+}
+add(2,3)
+const add1 = (c,d)=>{
+    console.log(c-d);
+    
+}
+add1(4,7)
+
+const mul = (e)=>{
+    console.log(e*e);
+    
+}
+mul(5)
+
+const user = (name,age)=>({
+    name:name,
+    age : age
+})
+console.log(user("siva",21));
+
+    const data = [1,2,3,4,5];
+    const data1=  data.map(n=>n*n)
+    console.log(data1);
+
+
+    const name1 = "siva"
+    const age1 = 21
+    const course = "IT"
+    console.log(`${name1},${age1},${course}`);
+     
+
+    const address = `anna durai street , kanchipuram-631501`
+    console.log(address);
+
+    const i= 10;
+    const j = 20;
+
+    console.log(`${i+j}`);
+    console.log(`${i-j}`);
+    console.log(`${i*j}`);
+
+    const colour = ["Pink", "white"]
+    const [colour1,colour2] = colour
+    console.log(colour1,colour2);
+
+    const colours = {colour3:"Pink",colour4:"Black",colour5:"white"}
+    const {colour3,colour4} = colours
+    console.log(colour3,colour4);
+
+const animals = {animal1:"Lion",animal2:"cheetah"}
+
+const { animal1: animalname1, animal2: animalname2 } = animals
+console.log(animalname1,animalname2);
+    
+
+const flavours = ({flavour1,flavour2})=>{
+    console.log(`Flavour1:${flavour1},Flavour2:${flavour2}`);
+    
+
+}
+flavours({flavour1 : "choclate", flavour2:"butterscotch"}  )
+
+const numbers = [1,2,3]
+const [...number] = numbers
+console.log(number);
+
+const arr1 = [1,2,3]
+const arr2 = [4,5,6]
+const array = [...arr1,...arr2]
+console.log(array);
+
+const data2 = {Name:"siva",Age:"21",Course:"Biotech"}
+const updatedata = {...data2,Age:"21"}
+console.log(updatedata);
+
+
+const sum = (k,l,m)=>{
+    return k+l+m
+    
+
+}
+const values = [10,20,30]
+console.log(sum(...values));
+
+    const numbers1 = (...number)=>{
+        console.log(number);
+        
+        
+    }
+    numbers1(10,20,30,40,50);
+
+    const sum1 = (...numbers)=>{
+      return   numbers.reduce((acc,e)=>acc+e,0)
+        
+    }
+    console.log(sum1(10,20,30,40));
+
+    const data3 = [12,78,56,43,76]
+    const [first,...second] = data3
+    console.log(first,...second);
+
+    //spread - used in function call,array or objects
+
+    const num = [1,2,3]
+    
+    console.log(...num);
+
+    //rest-used in functions when we dont know how many arguments we have to pass
+
+    function add5 (...numb){
+       console.log(numb);
+       
+    }
+    add5(1,2,3)
+        
+    const even = 6
+    const check = even%2 == 0 ? "even":"odd"
+    console.log(check);
+    
+    const mark = 56
+    const Check = mark > 30 ?"pass":"fail"
+    console.log(Check);
+
+    let age6 = 18
+    if(age >=18){
+    console.log("Eligibility to vote");
+    }
+    else{
+        console.log("Not eligibility");
+        
+    }
+
+    const Age1 = 17
+    const vote = Age1 >=18 ? "Eligibility to vote" :"Not Eligibility"
+    console.log(vote);
+    
+    const score = 78
+    const grade = score>90 ?"A":score>80? "B": score >70 ?"C":fail
+    console.log(grade);
+    
+
+    const user1 = {name2 :"siva",address:"kanchipuram"}
+    console.log(user1?.name2);
+    console.log(user1?.phone);
+    
+
+    console.log(user1?.address);
+
+    const user2 = [{name3:"siva",address:"kanchipuram"}]
+    console.log(user2?.[0].name3);
+    const value1 = 0
+    console.log(value || 10);
+    console.log(value ?? 10);
+
+    const string = ""
+    console.log(string || "siva");
+    console.log(string ?? "siva");
+
+    class Students {
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+
+        }
+    }
+
+    const student1 = new Students ("siva",21)
+    const student2 = new Students("sivakumar",21)
+
+    console.log(student1.name);
+    console.log(student2.age);
+    
+
+</script>
