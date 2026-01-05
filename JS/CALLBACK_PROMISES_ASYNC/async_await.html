@@ -1,0 +1,92 @@
+<script>
+
+    // ASYNC/AWAIT
+
+    // 1
+
+    async function getNumber() {
+
+        return 10;
+    }
+
+    getNumber().then((result) => {
+
+        console.log(result);
+
+    });
+
+
+    // 2
+
+    async function divide(a, b) {
+
+        try {
+
+            if (b === 0) {
+                throw "cannot divide by zero";
+            }
+            return a / b;
+        } catch (error) {
+            console.log("Error:", error);
+
+        }
+    }
+
+    divide(10, 0);
+
+
+    // 3
+
+
+    function add(num) {
+        return Promise.resolve(num + 5);
+    }
+
+    async function sequential() {
+        const a = await add(5);
+        const b = await add(a);
+        console.log(b);
+    }
+
+    sequential();
+
+
+    //   4
+
+
+    function task1() {
+        return Promise.resolve("Task 1 done");
+    }
+
+    function task2() {
+        return Promise.resolve("Task 2 done");
+    }
+
+    async function parallel() {
+        const results = await Promise.all([task1(), task2()]);
+        console.log(results);
+    }
+
+    parallel();
+
+
+    // 5
+
+
+    function getData() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Data received");
+            }, 1000);
+        });
+    }
+
+    async function showData() {
+        const result = await getData();
+        console.log(result);
+    }
+
+    showData();
+
+
+</script>
