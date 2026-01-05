@@ -1,0 +1,93 @@
+<SCript>
+
+    // PROMISE
+
+    // 1
+
+    const delaypromise = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Promise method resolve after 2 seconds");
+        }, 2000);
+    });
+
+    delaypromise.then((message) => {
+        console.log(message);
+    });
+
+    // 2
+
+    const rejectpromise = new Promise((resolve, reject) => {
+        reject("something went wrong")
+    });
+
+    rejectpromise
+        .then((result) => {
+            console.log(result);
+
+        }).catch((error) => {
+            console.log(error);
+
+        });
+
+
+    //   3
+
+    function add(value) {
+
+        return new Promise((resolve) => {
+            resolve(value + 10);
+        });
+    }
+
+    add(5)
+        .then((result) => {
+            console.log(result);
+            return (result);
+        }).then((finalResult) => {
+            console.log(finalResult);
+
+        });
+
+
+    //  4  
+
+    const p1 = Promise.resolve(10);
+    const p2 = Promise.resolve(20);
+    const p3 = Promise.resolve(30);
+
+    Promise.all([p1, p2, p3])
+        .then((results) => {
+            console.log(results);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+
+    //  5   
+
+
+    function callbackFunc(callback) {
+  setTimeout(() => {
+    callback("Data from callback");
+  }, 1000);
+}
+
+function promiseFunc() {
+  return new Promise((resolve) => {
+    callbackFunc((data) => {
+      resolve(data);
+    });
+  });
+}
+
+promiseFunc().then((result) => {
+  console.log(result);
+});
+
+
+
+
+
+
+</SCript>
