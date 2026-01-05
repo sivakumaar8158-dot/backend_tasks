@@ -1,0 +1,51 @@
+<script>
+
+    // CALLBACK 
+
+setTimeout (function () {
+
+    console.log("Hello! This is setTimeout.");
+    
+
+},1000);
+
+
+function calculate(a,b, callback) {
+
+    callback(a,b);
+}
+
+function add (x,y) {
+    console.log("sum:", x + y);
+    
+}
+
+calculate(5, 5, add);
+
+
+function task1 (callback){
+    setTimeout(()=> {
+        console.log("Task 1 completed");
+        callback();
+    },2000);
+}
+
+function task2(){
+    console.log("Task 2 completed");
+    
+}
+
+task1(task2)
+
+
+function fakeAPI(callback) {
+  setTimeout(() => {
+    callback("Data received from API");
+  }, 1500);
+}
+
+fakeAPI(function (response) {
+  console.log(response);
+});
+
+</script>
