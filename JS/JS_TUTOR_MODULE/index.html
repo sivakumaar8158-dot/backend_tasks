@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn JavaScript the Smart Way - A simplified learning path for Fresher, Intermediate, and Excellent levels.">
+    <title>Learn JavaScript the Smart Way | Mastery Simplified</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <nav class="navbar">
+        <div class="logo">JS<span class="highlight">Smart</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#philosophy">Why Smart?</a></li>
+            <li><a href="#levels">Learning Paths</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#" class="btn-primary">Get Started</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="hero-title">Master JavaScript <br><span class="gradient-text">The Smart Way</span></h1>
+            <p class="hero-subtitle">Stop memorizing syntax. Start building logic. A simplified, adaptive path tailored
+                for every skill level - from absolute beginner to architecture expert.</p>
+            <div class="cta-group">
+                <a href="#levels" class="btn-primary glow-effect">Choose Your Path</a>
+                <a href="#philosophy" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-visual" data-aos="fade-left">
+            <div class="code-block-wrapper">
+                <pre><code class="language-javascript">
+const learnSmart = async (user) => {
+  await user.levelUp();
+  return "Mastery Unlocked";
+};
+                </code></pre>
+                <div class="circle-blob blob-1"></div>
+                <div class="circle-blob blob-2"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- REPLACED Methods with Comprehensive Curriculum -->
+    <section id="curriculum" class="curriculum-section">
+        <div class="section-header" data-aos="fade-up">
+            <h2>The <span class="highlight">Knowledge</span> Base</h2>
+            <p>Everything you need to know, organized for clarity.</p>
+        </div>
+
+        <!-- Tab Tiles -->
+        <div class="tabs-container" data-aos="fade-up">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="fundamentals">Fundamentals</button>
+                <button class="tab-btn" data-tab="data-logic">Data & Logic</button>
+                <button class="tab-btn" data-tab="functions">Functions</button>
+                <button class="tab-btn" data-tab="modern">Async & Pro</button>
+            </div>
+
+            <div class="tabs-content">
+
+                <!-- FUNDAMENTALS TAB -->
+                <div class="tab-pane active" id="fundamentals">
+                    <div class="topic-grid">
+                        <div class="topic-card interactive-card" data-topic="variables">
+                            <h3>Variables & Scopes</h3>
+                            <p class="topic-desc"><strong>let</strong>, <strong>const</strong>, and
+                                <strong>var</strong>.</p>
+                            <div class="micro-code">
+                                <span class="kwd">let</span> x = 10;<br>
+                                <span class="kwd">const</span> y = 20;
+                            </div>
+                        </div>
+                        <div class="topic-card interactive-card" data-topic="datatypes">
+                            <h3>Datatypes</h3>
+                            <p class="topic-desc">Strings, Numbers, Objects & more.</p>
+                        </div>
+                        <div class="topic-card interactive-card" data-topic="operators">
+                            <h3>Operators</h3>
+                            <ul class="clean-list">
+                                <li><strong>Arithmetic:</strong> (+, -)</li>
+                                <li><strong>Logical:</strong> (&&, ||)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DATA & LOGIC TAB -->
+                <div class="tab-pane" id="data-logic">
+                    <div class="topic-grid">
+                        <div class="topic-card interactive-card" data-topic="arrays">
+                            <h3>Arrays</h3>
+                            <p class="topic-desc">Ordered lists of data.</p>
+                            <div class="micro-code">
+                                <span class="kwd">const</span> arr = [1, 2, 3];
+                            </div>
+                        </div>
+                        <div class="topic-card interactive-card" data-topic="loops">
+                            <h3>Loops</h3>
+                            <p class="topic-desc">Repeat actions automatically.</p>
+                            <div class="micro-code">
+                                <span class="kwd">for</span> (let i=0; i&lt;5; i++)
+                            </div>
+                        </div>
+                        <div class="topic-card interactive-card" data-topic="objects">
+                            <h3>Objects</h3>
+                            <p class="topic-desc">Key-value pairs.</p>
+                            <div class="micro-code">
+                                { name: <span class="str">'Siva'</span> }
+                            </div>
+                        </div>
+                        <div class="topic-card interactive-card" data-topic="filter">
+                            <h3>Filter</h3>
+                            <div class="micro-code">
+                                <span class="kwd">const</span> evens = nums.<span class="func">filter</span>(n =>
+                                n%2);
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FUNCTIONS TAB -->
+                <div class="tab-pane" id="functions">
+                    <div class="topic-grid">
+                        <div class="topic-card wide interactive-card" data-topic="functions">
+                            <h3>The Function Anatomy</h3>
+                            <div class="micro-code">
+                                <span class="kwd">function</span> <span class="func">greet</span>() { ... }
+                            </div>
+                        </div>
+                        <div class="topic-card interactive-card" data-topic="callbacks">
+                            <h3>Callback Functions</h3>
+                            <p class="topic-desc">Functions passed to others.</p>
+                        </div>
+                        <div class="topic-card interactive-card" data-topic="hof">
+                            <h3>Higher-Order</h3>
+                            <p class="topic-desc">Functions treating functions as data.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODERN/ASYNC TAB -->
+                <div class="tab-pane" id="modern">
+                    <div class="topic-grid">
+                        <div class="topic-card wide interactive-card" data-topic="async">
+                            <h3>Async / Await</h3>
+                            <p class="topic-desc">Handling async operations.</p>
+                        </div>
+                        <div class="topic-card interactive-card" data-topic="promises">
+                            <h3>Promises</h3>
+                            <p class="topic-desc">Future values.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="info-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2 id="modal-title">Topic Title</h2>
+            <div id="modal-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- KEEPING Explanation Section -->
+    <section id="explanation" class="explanation-section">
+        <div class="split-layout">
+            <div class="text-content" data-aos="fade-right">
+                <h2>What is <span class="highlight">JavaScript?</span></h2>
+                <h3 class="sub-heading">The Brain of the Web</h3>
+                <p>Imagine your website as a human body:</p>
+                <div class="analogy-box">
+                    <div class="analogy-item">
+                        <span class="tag html">HTML</span>
+                        <p>The <strong>Skeleton</strong>. It gives structure (bones) to your content.</p>
+                    </div>
+                    <div class="analogy-item">
+                        <span class="tag css">CSS</span>
+                        <p>The <strong>Skin & Style</strong>. It makes the body look good (clothing, appearance).</p>
+                    </div>
+                    <div class="analogy-item highlight-item">
+                        <span class="tag js">JavaScript</span>
+                        <p>The <strong>Brain & Muscles</strong>. It makes the body <em>move, think, and react</em>.</p>
+                    </div>
+                </div>
+                <p class="summary-text">Without JavaScript, the web is static posters. With it, the web becomes an
+                    interactive playground.</p>
+            </div>
+
+            <div class="interactive-demo" data-aos="fade-left">
+                <div class="mac-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="title">logic.js</span>
+                    </div>
+                    <div class="window-body">
+                        <div class="code-line"><span class="keyword">const</span> <span class="variable">button</span> =
+                            <span class="object">document</span>.<span class="method">querySelector</span>(<span
+                                class="string">'.btn'</span>);
+                        </div>
+                        <div class="code-line">&nbsp;</div>
+                        <div class="code-line"><span class="comment">// This is the "Brain" reacting to a click</span>
+                        </div>
+                        <div class="code-line"><span class="variable">button</span>.<span
+                                class="method">addEventListener</span>(<span class="string">'click'</span>, () => {
+                        </div>
+                        <div class="code-line indent"> <span class="variable">document</span>.<span
+                                class="property">body</span>.<span class="property">style</span>.<span
+                                class="property">backgroundColor</span> = <span class="string">'#0a0a12'</span>;</div>
+                        <div class="code-line indent"> <span class="function">alert</span>(<span
+                                class="string">'JavaScript is alive!'</span>);</div>
+                        <div class="code-line">});</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="levels" class="levels-section">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Your Journey Awaits</h2>
+            <p>Select your current experience level to begin.</p>
+        </div>
+        <div class="cards-container">
+            <!-- Fresher Card -->
+            <div class="level-card fresher" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000">
+                <div class="card-content">
+                    <div class="badge">Beginner</div>
+                    <h3>Fresher</h3>
+                    <p class="role">The Explorer</p>
+                    <ul class="checklist">
+                        <li>Fundamentals (Variables, Types)</li>
+                        <li>DOM Manipulation</li>
+                        <li>Basic Logic Building</li>
+                        <li>First interactive Project</li>
+                    </ul>
+                    <a href="#" class="btn-card">Start Basics</a>
+                </div>
+            </div>
+
+            <!-- Intermediate Card -->
+            <div class="level-card intermediate" data-aos="flip-left" data-aos-delay="200"
+                data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                <div class="card-content">
+                    <div class="badge">Intermediate</div>
+                    <h3>Developer</h3>
+                    <p class="role">The Builder</p>
+                    <ul class="checklist">
+                        <li>ES6+ Features & Modules</li>
+                        <li>Async/Await & APIs</li>
+                        <li>Object-Oriented Programming</li>
+                        <li>Framework Prep (React/Vue)</li>
+                    </ul>
+                    <a href="#" class="btn-card">Deep Dive</a>
+                </div>
+            </div>
+
+            <!-- Excellent Card -->
+            <div class="level-card excellent" data-aos="flip-left" data-aos-delay="400" data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000">
+                <div class="card-content">
+                    <div class="badge">Expert</div>
+                    <h3>Architect</h3>
+                    <p class="role">The Master</p>
+                    <ul class="checklist">
+                        <li>Design Patterns</li>
+                        <li>Performance Optimization</li>
+                        <li>Testing & CI/CD</li>
+                        <li>System Architecture</li>
+                    </ul>
+                    <a href="#" class="btn-card">Master Class</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section Removed -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>JS<span class="highlight">Smart</span></h4>
+                <p>&copy; 2024. All rights reserved.</p>
+            </div>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">GitHub</a>
+                <a href="#">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
