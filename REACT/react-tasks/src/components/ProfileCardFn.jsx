@@ -8,7 +8,7 @@ const ProfileCardFn = () => {
                 <img
                     src={reactLogo}
                     alt="Profile Avatar"
-                    className="rounded-circle mb-3 border border-2 border-primary"
+                    className="rounded-circle mb-3 border-2 border-primary"
                     style={{ width: '80px', height: '80px', objectFit: 'cover' }}
                 />
                 <h5 className="card-title fw-bold">React Developer</h5>

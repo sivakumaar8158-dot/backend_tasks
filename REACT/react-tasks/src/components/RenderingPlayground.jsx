@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const RenderingPlayground = () => {
     const primitiveName = "John Doe";

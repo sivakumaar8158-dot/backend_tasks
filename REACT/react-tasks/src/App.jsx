@@ -1,47 +1,49 @@
-import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import NavBar from './components/NavBar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import './index.css';
+import PropsUserCard from './components/PropsUserCard';
+import Task2Button from './components/Task2Button';
+import Task3Counter from './components/Task3Counter';
+import Task4UserFilter from './components/Task4UserFilter';
+import Task5UserForm from './components/Task5UserForm'
 
-function App() {
-  const [user, setUser] = useState(null);
-
-  const toggleUser = () => {
-    if (user) {
-      setUser(null);
-    } else {
-      setUser({
-        name: "Siva Kumar",
-        email: "siva@example.com",
-        isActive: true
-      });
-    }
-  };
-
+const App = () => {
   return (
-    <div className="min-vh-100 bg-light font-sans text-dark">
-      <NavBar />
+    <div className="container" style={{ padding: '20px', fontFamily: 'sans-serif' }}>
+      <h1 style={{ textAlign: 'center' }}>React Tasks Assignment</h1>
 
-      <div className="container text-center mb-4">
-        <button
-          onClick={toggleUser}
-          className={`btn btn-lg fw-bold transition shadow-sm ${user
-              ? "btn-danger"
-              : "btn-primary"
-            }`}
-        >
-          {user ? "Simulate Logout (Set User Null)" : "Simulate Login (Set User Object)"}
-        </button>
-      </div>
+      <section style={{ marginBottom: '40px' }}>
+        <h2>Task 1: User Card</h2>
+        <div style={{ display: 'flex', gap: '20px' }}>
+          <PropsUserCard name="John" age={25} city="Chennai"/>
+          <PropsUserCard name="Jane" age={30} city="Bangalore" isAdmin={true} />
+          
+        </div>
+      </section>
 
-      <Routes>
-        <Route path="/" element={<Home user={user} />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <section style={{ marginBottom: '40px' }}>
+        <h2>Task 2: Buttons</h2>
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <Task2Button
+            label="Default Primary"
+            onClick={() => alert('Primary Clicked')}
+          />
+          <Task2Button
+            label="Secondary Button"
+            variant="secondary"
+            onClick={() => alert('Secondary Clicked')}
+          />
+        </div>
+      </section>
+
+      <section style={{ marginBottom: '40px' }}>
+        <Task3Counter/>
+      </section>
+
+      <section style={{ marginBottom: '40px' }}>
+        <Task4UserFilter/>
+      </section>
+
+      <section style={{ marginBottom: '40px' }}>
+        <Task5UserForm/>
+      </section>
     </div>
   );
 }
