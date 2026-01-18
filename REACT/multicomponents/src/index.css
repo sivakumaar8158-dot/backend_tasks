@@ -1,4 +1,6 @@
-* {
+@import 'tailwindcss'
+
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,10 +20,10 @@ body {
 
 #root {
   min-height: 100vh;
-}
+} */
 
 /* Form Container Styles */
-.form-container {
+/* .form-container {
   background: white;
   padding: 2rem;
   border-radius: 12px;
@@ -72,10 +74,10 @@ body {
 
 .form-group input:hover {
   border-color: #bbb;
-}
+} */
 
 /* Button Styles */
-button {
+/* button {
   padding: 10px 24px;
   background-color: #667eea;
   color: white;
@@ -127,10 +129,10 @@ button:disabled {
 .button-group button {
   flex: 1;
   margin-top: 0;
-}
+} */
 
 /* Message Styles */
-.error {
+/* .error {
   color: #dc3545;
   font-size: 0.85rem;
   margin-top: 0.3rem;
@@ -161,10 +163,10 @@ button:disabled {
   font-size: 0.85rem;
   margin-top: 0.5rem;
   font-style: italic;
-}
+} */
 
 /* Data Display */
-.submitted-data {
+/* .submitted-data {
   background: #f8f9fa;
   padding: 1rem;
   border-radius: 6px;
@@ -179,10 +181,10 @@ button:disabled {
 
 .submitted-data strong {
   color: #333;
-}
+} */
 
 /* Step Indicator */
-.step-indicator {
+/* .step-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -214,10 +216,10 @@ button:disabled {
   width: 40px;
   height: 2px;
   background-color: #ddd;
-}
+} */
 
 /* Responsive Design */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .form-container {
     padding: 1.5rem;
   }
@@ -238,4 +240,4 @@ button:disabled {
     margin-right: 0;
     margin-bottom: 0.5rem;
   }
-}
+} */
