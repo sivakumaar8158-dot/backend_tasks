@@ -8,6 +8,8 @@ import Task3_StateObject from './components/Task3_StateObject';
 import Task4_LoginForm from './components/Task4_LoginForm';
 import Task5_MultiStepForm from './components/Task5_MultiStepForm';
 import Task6_LocalStorage from './components/Task6_LocalStorage';
+import Task7_UseNavigateParams from './components/Task7_UseNavigateParams';
+import Task7_Result from './components/Task7_Result';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="task4" element={<Task4_LoginForm />} />
         <Route path="task5" element={<Task5_MultiStepForm />} />
         <Route path="task6" element={<Task6_LocalStorage />} />
+        <Route path="task7" element={<Task7_UseNavigateParams />} />
+        <Route path="task7-result" element={<Task7_Result />} />
       </Route>
 
       {/* Default redirect */}

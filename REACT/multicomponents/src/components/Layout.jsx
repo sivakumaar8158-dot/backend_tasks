@@ -8,6 +8,7 @@ export default function Layout() {
     { id: 4, title: 'Login Form' },
     { id: 5, title: 'Multi-Step' },
     { id: 6, title: 'LocalStorage' },
+    { id: 7, title: 'useNavigate Params' },
   ];
 
   return (
