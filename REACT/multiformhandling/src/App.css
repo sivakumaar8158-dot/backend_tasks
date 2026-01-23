@@ -1,0 +1,35 @@
+/* App-specific styles */
+.form-container {
+  transition: all 0.3s ease;
+}
+
+button {
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Smooth animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-result {
+  animation: slideIn 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .flex-wrap {
+    flex-direction: column;
+  }
+}
