@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #1a1c2c 0%, #4a192c 100%);
+    /* Deep rich dark gradient */
+    background-attachment: fixed;
+    /* Ensures background stays when scrolling */
+    color: #fff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+}
