@@ -4,7 +4,7 @@ function Dashboard({ user, onLogout }) {
   const [userData, setUserData] = useState(user);
 
   useEffect(() => {
-    // If user data is not passed via props, fetch from localStorage
+   
     if (!userData) {
       const currentUser = localStorage.getItem('currentUser');
       if (currentUser) {
