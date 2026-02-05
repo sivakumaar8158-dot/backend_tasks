@@ -1,0 +1,170 @@
+What is the purpose of useEffect in React?
+
+👉 useEffect is used to handle side effects in a component.
+
+Side effects = things React doesn’t control directly.
+
+Examples:
+
+API calls
+
+Timers (setInterval)
+
+Event listeners
+
+Updating document title
+
+💬 Interview answer:
+
+useEffect lets me run code after render to perform side effects like fetching data or setting up subscriptions.
+
+2️⃣ What problem does useMemo solve?
+
+👉 useMemo optimizes performance by avoiding expensive recalculations.
+
+Without useMemo
+
+Function runs on every render
+
+Even if inputs didn’t change
+
+With useMemo
+
+Value is cached
+
+Recomputed only when dependencies change
+
+💬 Interview answer:
+
+useMemo prevents unnecessary recalculation of expensive values.
+
+3️⃣ Why do we use useCallback in React?
+
+👉 useCallback is used to memoize functions.
+
+Problem it solves:
+
+Functions are recreated on every render
+
+Causes unnecessary child re-renders
+
+💬 Interview answer:
+
+useCallback prevents functions from being recreated on every render, helping optimize child components.
+
+4️⃣ Difference between useEffect and useMemo?
+useEffect	useMemo
+Handles side effects	Optimizes performance
+Runs code after render	Returns cached value
+Used for API calls	Used for calculations
+
+💬 One-liner:
+
+useEffect runs side effects, useMemo caches computed values.
+
+5️⃣ Difference between useMemo and useCallback?
+useMemo	useCallback
+Memoizes a value	Memoizes a function
+Returns a value	Returns a function
+Used for heavy calculations	Used for stable callbacks
+
+💬 One-liner:
+
+useMemo is for values, useCallback is for functions.
+
+6️⃣ What happens if you don’t provide a dependency array?
+useEffect
+
+Runs after every render
+
+Can cause infinite loops
+
+useMemo / useCallback
+
+Recomputes on every render
+
+No performance benefit
+
+💬 Interview answer:
+
+Without dependencies, hooks run on every render, which can hurt performance.
+
+7️⃣ When does useMemo recompute its value?
+
+👉 When any dependency value changes
+
+useMemo(() => calculate(), [a, b]);
+
+
+If a or b changes → recompute
+Else → reuse cached value
+
+💬 Interview answer:
+
+useMemo recalculates only when one of its dependencies changes.
+
+8️⃣ How does useCallback prevent unnecessary child re-renders?
+
+👉 By keeping the same function reference
+
+Without useCallback
+onClick={() => doSomething()}
+
+
+→ new function every render
+→ child re-renders
+
+With useCallback
+const handleClick = useCallback(() => {
+  doSomething();
+}, []);
+
+
+→ same function reference
+→ child does not re-render
+
+💬 Interview answer:
+
+useCallback keeps the function reference stable, preventing unnecessary re-renders in child components.
+
+9️⃣ Can we perform API calls inside useMemo or useCallback? Why?
+
+❌ NO
+
+Why?
+
+API calls are side effects
+
+useMemo & useCallback are for pure functions
+
+👉 API calls belong in useEffect
+
+💬 Interview answer:
+
+No, API calls should be done in useEffect because they are side effects.
+
+🔟 Real-Time Scenario Using useEffect + useMemo + useCallback
+Scenario: Product List Page
+🔹 useEffect
+
+Fetch products from API
+
+🔹 useMemo
+
+Filter products by category
+
+🔹 useCallback
+
+Handle add-to-cart function passed to child
+
+useEffect(() => {
+  fetchProducts();
+}, []);
+
+const filteredProducts = useMemo(() => {
+  return products.filter(p => p.category === selectedCategory);
+}, [products, selectedCategory]);
+
+const addToCart = useCallback((product) => {
+  setCart(prev => [...prev, product]);
+}, []);
