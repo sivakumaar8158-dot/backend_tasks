@@ -1,0 +1,9 @@
+micro service - monolathic 
+MVC pattern
+Express
+server
+Route handling - routes - route mounting
+middlewares
+controllers 
+
+
