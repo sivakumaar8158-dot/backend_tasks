@@ -29,5 +29,13 @@ try {
     
 }
 
+}
+
+export const getData = async(req,res)=>{
+
+
+    const data = await hashModel.find()
+
+    res.status(200).json({info:data})
 
 }
